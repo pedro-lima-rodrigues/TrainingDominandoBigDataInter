@@ -1,24 +1,18 @@
-ÔªøIMPORT $;
-
-OUTPUT($.File_Housing.File);
-
-
-
-// *****
+Ôªø// *****
 // Elementos constituintes basicos da ECL
 // Uma definicao
-Mydef := 'Ol√° mundo';  // definicao do tipo "value"
+//Mydef := 'Ol· mundo';  // definicao do tipo "value"
 
 // Uma acao
-// OUTPUT('Ol√° mundo');
- output(mydef);
+ OUTPUT('Ol· mundo');
+// OUTPUT(mydef);
 
-//*
+/*
 // *****
 // Estruturas de dados basicas em ECL
 // Estrutura RECORD
 rec := RECORD
-	STRING10  Firstname;
+  STRING10  Firstname;
 	STRING    Lastname;
 	STRING1   Gender;
 	UNSIGNED1 Age;
@@ -38,20 +32,20 @@ OUTPUT(ds);
 
 
 // *****
-// Filtragem e tabula√ßao de datasets
+// Filtragem e tabulaÁao de datasets
 // recset := ds(Age<65);
 // recset; //Equivale a: OUTPUT(recset);
 
 // recset := ds(Age<65,Gender='M');
 // recset;
 
-// IsSeniorMale := ds.Age<65 AND ds.Gender='M'; //defini√ß√£o do tipo "boolean"
+// IsSeniorMale := ds.Age<65 AND ds.Gender='M'; //definiÁ„o do tipo "boolean"
 // recset := ds(IsSeniorMale);
 // recset;
 
 // SetGender := ['M','F'];  //definicao do tipo "set"
 // recset := ds(Gender IN SetGender);
-// recset;						// defini√ß√£o do tipo "recordset"
+// recset;						// definiÁ„o do tipo "recordset"
 // COUNT(recset);    //Equivale a: OUTPUT(COUNT(recset));
 
 // rec2 := RECORD
@@ -68,20 +62,20 @@ OUTPUT(ds);
 // *****
 // Transformacoes basicas em ECL
 // Eliminacao de campos desnecessarios
- tbl := TABLE(ds,{Firstname,LastName,Income});
- tbl;
+// tbl := TABLE(ds,{Firstname,LastName,Income});
+// tbl;
 
 // Ordenacao de valores
- sortbl := SORT(tbl,LastName);
- sortbl;
+// sortbl := SORT(tbl,LastName);
+// sortbl;
 
 // Remocao de duplicidades
- dedptbl := DEDUP(sortbl,LastName);
- dedptbl;
+// dedptbl := DEDUP(sortbl,LastName);
+// dedptbl;
 
 
 
-//*
+/*
 // Adicao de campo no dataset
 rec2 := RECORD
   UNSIGNED   recid;  

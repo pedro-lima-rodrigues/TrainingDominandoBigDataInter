@@ -1,8 +1,11 @@
-﻿IMPORT $,STD;
+﻿IMPORT $,DataPatterns;
 
 lending := $.File_lending_otimizado.File;
 
 lending;
+
+OUTPUT(DataPatterns.Profile($.lending,,,,,10));
+// OUTPUT(DataPatterns.Benford($.File_Property.File,'assessed_value, total_value'));
 
 // rec := RECORD
     // lending.num_rev_accts;
