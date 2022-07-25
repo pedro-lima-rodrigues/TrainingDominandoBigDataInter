@@ -1,7 +1,7 @@
 ﻿IMPORT $, DataPatterns;
 
 //Dataset bruto
-// FileRaw := $.File_raw.Dataset_raw;
+FileRaw := $.File_raw.Dataset_raw;
 // OUTPUT(FileRaw);
 // COUNT(FileRaw);
 
@@ -17,3 +17,12 @@
 //Dataset filtrado com campos de interesse
 // $.File_Lendings.Dataset_Lendings;
 
+//Dataset limpo e com campo aleatório
+OUTPUT($.Prep01.myDataE,NAMED('CleanLendings'));
+COUNT($.Prep01.myDataE);
+
+//Amostras de treinamento e teste
+// OUTPUT($.Prep01.myTrainData,NAMED('TrainData'));
+// COUNT($.Prep01.myTrainData);
+// OUTPUT($.Prep01.myTestData,NAMED('TestData'));
+// COUNT($.Prep01.myTestData);
